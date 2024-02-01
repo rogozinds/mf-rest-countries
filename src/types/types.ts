@@ -23,10 +23,10 @@ export interface Country {
 }
 export interface DetailedCountry extends Country{
 }
-enum Region {
-  Africa = "africa",
-  America = "america",
-  Europe = "europe",
-  Asia = "asia",
-  Oceania = "oceania",
-}
+export const Region = {
+    Africa: "africa",
+    America: "americas",
+    Europe: "europe",
+    Asia: "asia",
+    Oceania: "oceania",
+};
