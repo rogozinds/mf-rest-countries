@@ -1,10 +1,10 @@
 import {apiClient} from "./BaseService";
-import {Country} from "../types/country";
+import {CountryFromRest} from "../types/types";
 import {handleAxiosError} from "./helpers";
 
 export const getAllCountries = async ()=> {
     return await apiClient
-        .get<Country[]>("/all")
+        .get<CountryFromRest[]>("/all")
         .then((response) => response.data)
         .catch(handleAxiosError);
 };

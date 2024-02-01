@@ -1,14 +1,12 @@
 import { useParams } from "react-router-dom";
-import {useCountries} from "../hooks/country";
+import React from "react";
 
-export const CountryPage = () => {
+export const CountryPage: React.FC= () => {
     const { countryid } = useParams<{ countryid: string }>();
-    const countries = useCountries();
     return (
 
         <>
             This is country page for {countryid}
-            Countries length:{countries.countries.length}
         </>
     );
 };
