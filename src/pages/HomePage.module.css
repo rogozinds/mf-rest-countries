@@ -1,0 +1,18 @@
+.filter-panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.input {
+
+}
+.select {
+
+}
+@media (max-width: 768px) {
+    .filter-panel {
+        display: flex;
+        flex-direction: column;
+    }
+}

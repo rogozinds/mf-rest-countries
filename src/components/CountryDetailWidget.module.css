@@ -1,0 +1,13 @@
+
+.main {
+    cursor: pointer;
+}
+
+.content {
+    padding: 1rem;
+}
+/*@media (max-width: 768px) {*/
+/*    .card {*/
+/*        grid-template-columns: 1fr; !* Single column on mobile *!*/
+/*    }*/
+/*}*/

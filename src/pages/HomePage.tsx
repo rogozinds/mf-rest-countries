@@ -2,6 +2,7 @@ import {useCountries} from "../hooks/country";
 import React, {useState} from "react";
 import {CountryList} from "../components/CountryList";
 import {Region} from "../types/types";
+import styles from './HomePage.module.css';
 
 const ALL="All";
 export const HomePage:React.FC= () => {
@@ -18,27 +19,27 @@ export const HomePage:React.FC= () => {
 
     return (
         <>
-            <input
-                type="text"
-                placeholder="Filter countries..."
-                value={filter}
-                onChange={(e) => setFilter(e.target.value)}
-            />
-            <select
-                value={regionFilter}
-                onChange={(e) => {
-                    setRegionFilter(e.target.value)
-                }}
-            >
-                {regions.map(region => (
-                    <option key={region} value={region.toLowerCase()}>{region}</option>
-                ))}
-            </select>
-            Countries length:{filteredCountries.length}
-            Region filter: {countries[0]?.region}
-            Region filter: {regionFilter == countries[0]?.region}
-            Countries length:{filteredCountries.length>0?filteredCountries[0].region: "falh"}
-
+            <div className={styles.filterPanel}>
+                    <input
+                        className={styles.input}
+                        type="text"
+                        placeholder="Filter countries..."
+                        value={filter}
+                        onChange={(e) => setFilter(e.target.value)}
+                    />
+                    <select
+                        className={styles.select}
+                        value={regionFilter}
+                        onChange={(e) => {
+                            setRegionFilter(e.target.value)
+                        }}
+                    >
+                        {regions.map(region => (
+                            <option key={region} value={region.toLowerCase()}>{region}</option>
+                        ))}
+                    </select>
+            </div>
+            {countries.length}
             <CountryList countries={filteredCountries}></CountryList>
         </>
     );
