@@ -24,6 +24,12 @@
 .content {
     padding: 1rem;
 }
+.content > * {
+    white-space: nowrap; /* Prevents the text from wrapping to a new line */
+    overflow: hidden; /* Hides the overflow text */
+    text-overflow: ellipsis; /* Adds an ellipsis to the end of the overflow text */
+    max-width: 100%; /* Ensures the content does not exceed the parent's width */
+}
 /*@media (max-width: 768px) {*/
 /*    .card {*/
 /*        grid-template-columns: 1fr; !* Single column on mobile *!*/

@@ -18,12 +18,12 @@ export const HomePage:React.FC= () => {
     });
 
     return (
-        <>
-            <div className={styles.filterPanel}>
+        <div className={styles.main}>
+            <div className={styles.filter_panel}>
                     <input
                         className={styles.input}
-                        type="text"
-                        placeholder="Filter countries..."
+                        type="search"
+                        placeholder="Search for a country..."
                         value={filter}
                         onChange={(e) => setFilter(e.target.value)}
                     />
@@ -39,8 +39,7 @@ export const HomePage:React.FC= () => {
                         ))}
                     </select>
             </div>
-            {countries.length}
             <CountryList countries={filteredCountries}></CountryList>
-        </>
+        </div>
     );
 };

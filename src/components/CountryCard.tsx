@@ -13,8 +13,8 @@ export const CountryCard:React.FC<Props> = ({country}) => {
         navigate(`/countries/${name}`);
     }
     return (
-        <div className={styles.card} onClick={()=>{goDetailPage(country.name)
-            }
+        <div className={styles.card}
+             onClick={()=>{goDetailPage(country.name)}
         }>
             <img className={styles.flag} src={country.flagUrl} alt={country.flagAlt}  />
             <div className={styles.content}>
