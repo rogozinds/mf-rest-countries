@@ -6,7 +6,7 @@ export const CountryPage: React.FC= () => {
     return (
 
         <>
-            This is country page for {countryid}
+            This is country Detail pagefor {countryid}
         </>
     );
 };

@@ -1,0 +1,15 @@
+.main {
+    display: flex;
+    align-items: center;
+}
+
+.label {
+    font-weight: bold;
+    margin-right: 8px;
+    text-transform: capitalize;
+}
+
+.value {
+    color: #686868;
+    text-transform: capitalize;
+}
