@@ -7,6 +7,7 @@ export interface CountryStore {
     countries:Country[],
     groupByRegion:any,
     mapByName:any,
+    mapById:any,
 
 }
 
@@ -24,7 +25,7 @@ export const useCountries = () => {
     const [countries] = useAtom(countriesLoadable);
 
     if (countries.state === "hasData") {
-        return countries.data;
+        return countries.data as CountryStore;
     } else {
         return {countries:[], groupByRegion:{}};
     }

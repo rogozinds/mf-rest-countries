@@ -12,4 +12,8 @@
 .value {
     color: #686868;
     text-transform: capitalize;
+    text-overflow: ellipsis;
+    max-width: 200px;
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Hides overflow text */
 }

@@ -1,13 +1,66 @@
+/*//MY*/
+/*.container {*/
+/*    display: grid;*/
+/*    grid-template-rows: 100%;*/
+/*    grid-template-columns: 50% 50%;*/
+/*}*/
+/*.main {*/
+/*    cursor: pointer;*/
+/*}*/
 
-.main {
-    cursor: pointer;
-}
-
-.content {
-    padding: 1rem;
-}
+/*.content {*/
+/*    display: grid;*/
+/*    grid-template-rows: 30% 40% 30%;*/
+/*    grid-template-columns: 50% 50%;*/
+/*}*/
+/*CHAT GPT*
 /*@media (max-width: 768px) {*/
 /*    .card {*/
 /*        grid-template-columns: 1fr; !* Single column on mobile *!*/
 /*    }*/
 /*}*/
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    height: 30vh; /* Full viewport height, adjust as needed */
+    gap: 10rem;
+}
+
+.flag {
+    width: 100%; /* Fill the column width */
+    height: 100%; /* Fill the column height */
+    object-fit: cover; /* Cover the area without losing aspect ratio */
+}
+.content {
+    display: grid;
+    grid-template-rows: 30% auto 1fr; /* Divide into three rows */
+    height: 100%; /* Full height of its grid area */
+    grid-column: 2; /* Ensure it occupies the second column of the container */
+}
+
+.header {
+    /* The header takes the first row; styles as needed */
+}
+
+/* LabeledText components in row 2 should be in two columns */
+/* Assuming LabeledText is a block element or styled as such, we place them in two divs for columns */
+
+/* Add a wrapper around the LabeledText components for row 2 */
+.row2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.col1, .col2 {
+    flex: 1; /* Each takes half of the row */
+    display: flex;
+    flex-direction: column;
+}
+
+.borders {
+    /* Takes full width of the content area */
+}
+.labeledText {
+    /* Example, adjust as needed */
+    margin-bottom: 10px; /* Space between each LabeledText */
+}

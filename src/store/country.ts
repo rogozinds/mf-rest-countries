@@ -4,6 +4,7 @@ import {loadable} from "jotai/utils";
 import _ from "lodash";
 import {fromRest} from "../helpers/utils";
 import {Country} from "../types/types";
+import {atom} from "jotai";
 
 export const countriesAtom = atomWithRefresh(async () => {
     const countriesFromResponse = await getAllCountries();
@@ -18,5 +19,10 @@ export const countriesAtom = atomWithRefresh(async () => {
         mapByName:  _.keyBy(countries, "name")
     };
 });
+export const countryIdToName = atom(async (get)=>{
+   const atomValue =await get(countriesAtom) ;
+    debugger;
+   return  _.keyBy(atomValue.countries, "id")
+})
 
 export const countriesLoadable = loadable(countriesAtom);
